@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgb(70, 59, 59);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#login-section {
+    width: 50%;  
+    margin-left: 25%;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+}
+
+#login-button, #register-button {
+    width: 48%; 
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #ad9999;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px; 
+    margin-bottom: 10px;
+    display: flex;  
+    justify-content: space-between; /* Align buttons and text on opposite sides */
+    align-items: center; /* Ensure all elements are vertically centered */
+}
+
+li .task-text {
+    flex: 1;
+    text-align: left;
+}
+
+li .buttons {
+    display: flex;
+    gap: 5px;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #e6e6e6;
+}
+
+li button {
+    background-color: #d9534f;
+    padding: 5px 10px;
+    min-width: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li button.complete-btn {
+    background-color: #5cb85c;
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#add-task {
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#logout-button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #d9534f;
+}
+
+#welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+}
