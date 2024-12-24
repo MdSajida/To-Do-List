@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets a default font */
+    background-color:  rgb(169, 181, 157); /* White background for the todo section *//* Light background color for the body */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    height: 100vh; /* Full viewport height */
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 80%; /* Adjust as needed */
+    max-width: 400px; /* Optional max width */
+    /* Set a max width for the todo section */
+    min-width: 100px;
+    padding: 20px;
+}
+#copilot {
+    position: fixed; /* Position it fixed to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007bff; /* Example background color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for the copilot */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+#todo-section {
+  
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the todo section */
+}
+
+h1 {
+    text-align: center; /* Center the title */
+    color: #333; /* Darker text color */
+}
+
+#welcome-message {
+    text-align: center; /* Center the welcome message */
+    margin-bottom: 20px; /* Space below the welcome message */
+    color: #666; /* Gray color for the welcome message */
+}
+
+.input-group {
+    display: flex; /* Flex layout for input group */
+    justify-content: space-between; /* Space between input and button */
+    margin-bottom: 20px; /* Space below the input group */
+    
+}
+#todo-section hr{
+    border: 0; /* Remove default border */
+    border-top: 1px solid black; /* Set the top border to 2px solid black */
+}
+input[type="text"] {
+    text-align: center;
+    flex: 1; /* Allow input to grow */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners for input */
+    outline: none;
+    min-width: 8%;
+    /* Space between input and button */
+}
+.actions .delete-task:hover {
+    color: #d32626c8; /* Change color on hover */
+    scale:1.75;
+}
+.actions .complete-task:hover {
+    scale:1.75;
+    color: #3ac23a; /* Change color on hover */
+}
+.actions .edit-task:hover {
+    scale:1.75;
+    color: #3a8ec2; /* Change color on hover */
+}
+button {
+    padding: 10px 15px; /* Padding for the button */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+
+   
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#task-list {
+    list-style-type: none; /* Remove bullet points from list */
+    margin-top: 20px; /* Space above the task list */
+}
+
+#task-list li {
+    display: flex; /* Flex layout for each task */
+    justify-content: space-between; /* Space between task text and actions */
+    padding: 10px 0; /* Padding for each task */
+}
+
+.actions {
+    display: flex; /* Flex layout for actions */
+    flex-direction: row;
+    align-items:center;
+    gap:10px;
+}
+
+.actions span {
+    margin-left: 10px; /* Space between action icons */
+    cursor: pointer; /* Pointer cursor for action icons */
+    transition: color 0.2s; 
+}
+
+hr {
+    border: 0; /* Remove default border */
+    border-top: 1px solid; /* Add a custom border */
+    margin: 10px 0; /* Space above and below the hr */
+}
+
+#logout-button {
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center it horizontally and add vertical spacing */
+    text-align: center; /* Center text inside the button */
+    width: 30%; /* Full width for logout button */
+    background-color: #3580dc; /* Red background for logout */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#logout-button:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}
+ul li .task-text.checked{
+    text-decoration:line-through rgb(0, 255, 8) ;
+    
+}
+li.edited{
+    scale: 1.05;
+    background-color: #9b9797;   
+}
+
+
+/* Styling for the Authentication Section */
+
+/* Container for the form */
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title styling */
+.form-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+.form-container input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Button styling */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Additional button for switching between login/register */
+button.secondary {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+
+button.secondary:hover {
+    background-color: #0056b3;
+}
+
+
+/* Optional footer message styling */
+.footer-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
