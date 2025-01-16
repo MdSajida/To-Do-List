@@ -3,6 +3,12 @@
 ## Overview
 This To-Do List application is designed to help users manage their tasks efficiently. It includes features like adding, removing, and marking tasks as completed. The app also supports user authentication, allowing each user to have their own personalized to-do list stored using the browser's local storage.
 
+![login-register](todo_ss/users.png "initial page")
+![todo_page](todo_ss/todo_page.png "todos page")
+
+## to run
+Run the todo-users.html file
+
 ## Features
 - **Add Tasks:** Users can create new tasks to add to their list.
 - **Mark Tasks as Completed:** Tasks can be marked as completed or reverted to incomplete.
