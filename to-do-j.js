@@ -9,14 +9,6 @@ let lih;
 const currentUser  = localStorage.getItem('currentUser');
 
 
-// Function to handle user logout
-function handleLogout() {
- 
-  
-  localStorage.removeItem('currentUser'); 
-  window.location.href = 'todo-users.html';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   if (!currentUser) {
     window.location.href = 'todo-users.html'; // Redirect to login if not logged in
@@ -137,7 +129,7 @@ addTaskButton.addEventListener('click',addTask);
 
 taskInput.addEventListener('keypress', function (e) {
 
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && editing==false) {
    addTask(e);
   //e here is Enter event
       
@@ -186,7 +178,10 @@ taskList.addEventListener('click',(e)=>{
           // // Deselect previous task if editing
           //to remove prev lih.
           }
-      
+        if (li.querySelector('.task-text').classList.contains('checked')) {
+   
+            return; // Exit early if task is completed
+      }
       editing=true;
       addTaskButton.innerHTML='Edit';
       lih= e.target.parentElement.parentElement.parentElement
