@@ -54,4 +54,9 @@ function handleLogin() {
     }
 }
 
-
+function handleLogout() {
+ 
+  
+    localStorage.removeItem('currentUser'); 
+    window.location.href = 'todo-users.html';
+  }
